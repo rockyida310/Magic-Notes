@@ -1,3 +1,5 @@
+
+
 // console.log('Notes1.js');
 //if user adds a note , add it to localStorage
 showNotes();
@@ -31,12 +33,12 @@ function  showNotes(){
     let html = "";
     notesObj.forEach(function(element , index) {
         html += ` <div class="noteCard card mx-2 my-2" style="width: 18rem;">
-        <div class="card-body overflow-auto" style="height: 300px; scrollbar-width: none;">
+        <div class="card-body overflow-auto d-flex align-items-center flex-column" style="height: 300px; scrollbar-width: none;">
           <h5 class="card-title">Note ${index+1}</h5>
           <p class="card-text">
           ${element}
           </p>
-          <button id="${index}" onClick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+          <button id="${index}" onClick="deleteNote(this.id)" class="btn btn-primary position-absolute bottom-0 mb-3 ">Delete Note</button>
         </div>
       </div>`;;
 
